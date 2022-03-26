@@ -1,56 +1,13 @@
-# A Todo List demo App
-This is a todo list demo designed for CS411. 
-# Tutorial
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sY1lLGe7ECA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+# Travel Destination Planner
 
-A comprehensive writeup is avaliable [here](https://tichung.com/blog/2021/20200323_flask/).
+[![IMAGE ALT TEXT HERE](https://github.com/yuehaoshi/myFiles/blob/main/WebPics/WhereToGo%20Project/WhereToGo1.png)](https://www.youtube.com/watch?v=IezLfJvYMNo)
 
-## Requirements
-```
-python >= 3.5
-```
+The project “Where to go” is built with SQL, python flask, and other supporting language and technical components. The user interface on the website enables users to view and search suitable destinations with preferences and check the features of their predetermined destination. Those user-friendly functions and enjoyable user experience are realized by our design of SQL queries, comprehensively searching for the raw data, carefully filtering and logically merging databases, innovative design of UI, and advanced SQL functions. For each aspect, we will illustrate it thoroughly in the following sections.
 
-## Getting started
-```bash
-git clone https://github.com/a2975667/flask-gcp-mysql-demo.git
-cd flask-gcp-mysql-demo
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-export FLASK_APP = app
-flask run
-```
+The tourism industry has entered the rising trend with the pandemic trend going weaker and the increasing vaccine-taking rate. Research conducted by Hong Kong City University shows that the world's travel destinations are focused on only 39 cities and many participants expressed their difficult time in choosing destinations and ended up randomly choosing a famous city. To solve this problem, we help people to combine their preferences and minimize the range of potential choices. With entering the preference via our website, the potential cities meeting certain requirements are shown so that users are equipped with a helpful tool to make a meaningful decision.
 
-## Setting up GCP
-Create a `app.yaml` file in the root folder with the following content:
-```yaml
-runtime: python38 # or another supported version
+The features include Accommodations, Environments, Cuisine, Attractions of a city together with its own characteristics. The point we’d like to explain further is the importance of the ‘population’ feature in our database. According to statistical facts of normal distribution and Covid-19 infection rate model by John Hopkins, the rate is positively related to population size and density. Hence, we provide this attribute for users to make decisions based on their attitudes toward COVID-19.
 
-instance_class: F1
+As stated previously, the goal of the “Where To Go” application is to provide users a platform where they can look for their travel destination with their own selected preference. Like most recommendation websites, the website starts with a table listing the most popular travel cities in the world along with their location, population, country, etc. Below the table, user exploration space (e.g., search bar) and other ideas/ inspiration for users’ reference can be found. For example, for users who are in love with nature, there is a one-click button that recommends the tropical cities where attractions with animals can be found. Aside from this, through a one-click button, the users can have access to the accommodation conditions of each city in terms of ratings, WIFI availability, etc.
 
-env_variables:
-  MYSQL_USER: <user_name> # please put in your credentials
-  MYSQL_PASSWORD: <user_pw> # please put in your credentials
-  MYSQL_DB: <database_name> # please put in your credentials
-  MYSQL_HOST: <database_ip> # please put in your credentials
-
-handlers:
-# Matches requests to /images/... to files in static/images/...
-- url: /img
-  static_dir: static/img
-
-- url: /script
-  static_dir: static/script
-
-- url: /styles
-  static_dir: static/styles
-```
-
-Setting up the deployment
-```bash
-curl https://sdk.cloud.google.com | bash
-gcloud components install app-engine-python
-gcloud config set project cs411-sp21
-gcloud auth login
-gcloud app deploy
-```
+Specific features include creating, read, update and delete in our application. Over the city table, users can add their cities to the table if not listed or delete the cities which are not their cakes. A special feature involved in our application is that users can update the city population over the table if any out-of-dated data is found. However, an attribute that identifies the validation of the population is also provided. With this feature, we would like to improve our database by using up-to-date information from the user end without losing any credibility. The search/ read function is realized through a search bar where users can search for cities and get city information. Other features including travel ideas, evaluation of local accommodations, etc. can also be found.
