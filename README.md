@@ -1,5 +1,6 @@
 # Travel Destination Planner
 
+## Demo Vedio:
 [![IMAGE ALT TEXT HERE](https://github.com/yuehaoshi/myFiles/blob/main/WebPics/WhereToGo%20Project/WhereToGo1.png)](https://www.youtube.com/watch?v=IezLfJvYMNo)
 
 The project “Where to go” is built with SQL, python flask, and other supporting language and technical components. The user interface on the website enables users to view and search suitable destinations with preferences and check the features of their predetermined destination. Those user-friendly functions and enjoyable user experience are realized by our design of SQL queries, comprehensively searching for the raw data, carefully filtering and logically merging databases, innovative design of UI, and advanced SQL functions. For each aspect, we will illustrate it thoroughly in the following sections.
